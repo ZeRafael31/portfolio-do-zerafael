@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0%;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(254, 232, 184, 255);
+}
+
+a {
+  color: rgba(254, 232, 184, 255);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #5a2c1a;
+  height: 8vh;
+}
+
+main {
+  background: url(./img/wpp-poke.png) no-repeat center center;
+  background-size: cover;
+  height: 92vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #5a2c1a;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 70dvw;
+  height: 70dvh;
+  background-color: rgba(254, 232, 184, 255);
+  border: 2px solid #962020;
+  border-radius: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 90%;
+}
+
+.top h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes borderColorAnimation {
+  25% {
+    border-color: #473632;
+  }
+  50% {
+    border-color: #7e642d;
+  }
+  75% {
+    border-color: #b1531d;
+  }
+  100% {
+    border-color: #ff5e00;
+  }
+  75% {
+    border-color: #b1531d;
+  }
+  50% {
+    border-color: #7e642d;
+  }
+  25% {
+    border-color: #473632;
+  }
+}
+
+.card .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .left .top img {
+  margin: 8px;
+  border-radius: 40px;
+  width: 10vw;
+}
+.card .left .top img:hover {
+  border-radius: 35px;
+}
+
+.card .left .top img {
+  position: relative;
+  margin: 8px;
+  border-radius: 40px;
+  width: 10vw;
+  transition: 0.3s ease-in-out;
+  border: 5px solid #da9268;
+  animation: borderColorAnimation 3s infinite linear;
+}
+
+.card .left .top img::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border: 2px solid #da9268;
+  border-radius: 45px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card .left .top img:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.card .left .top p,
+.card .left .top h1 {
+  margin: 0px 0px 0px 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.card .text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0.8;
+}
+.text-align {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-align p {
+  font-size: 20px;
+  margin: 0%;
+}
+
+.text-align a {
+  font-size: 22px;
+  padding: 8px;
+  text-decoration: none;
+  color: #5a2c1a;
+}
