@@ -136,8 +136,6 @@ main {
   justify-content: center;
   align-items: center;
   width: 90%;
-  max-width: 800px;
-  height: 90%;
   padding: 20px;
   background-color: rgba(254, 232, 184, 255);
   border: 2px solid #962020;
@@ -173,23 +171,23 @@ main {
   }
 }
 
-.card .left {
+.left {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card .left .top img {
+.top img {
   margin: 8px;
   border-radius: 40px;
   width: 10vw;
 }
 
-.card .left .top img:hover {
+.top img:hover {
   border-radius: 35px;
 }
 
-.card .left .top img {
+.top img {
   position: relative;
   margin: 8px;
   border-radius: 40px;
@@ -199,7 +197,7 @@ main {
   animation: borderColorAnimation 3s infinite linear;
 }
 
-.card .left .top img::after {
+.top img::after {
   content: "";
   position: absolute;
   top: -5px;
@@ -212,19 +210,19 @@ main {
   transition: 0.3s ease-in-out;
 }
 
-.card .left .top img:hover::after {
+.top img:hover::after {
   opacity: 1;
   transform: scale(1.1);
 }
 
-.card .left .top p,
-.card .left .top h1 {
+.top p,
+.top h1 {
   margin: 0px 0px 0px 5px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
 }
 
-.card .text {
+.text {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: justify;
   max-width: 95%;
