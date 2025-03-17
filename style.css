@@ -66,7 +66,17 @@ main {
   margin: 8px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
+  .text-align p {
+    font-size: 16px;
+  }
+  .text-align a {
+    font-size: 18px;
+  }
+  .card .left .top img {
+    width: 25vw;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -122,11 +132,13 @@ main {
 
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70dvw;
-  height: 70dvh;
+  width: 90%;
+  max-width: 800px;
+  height: 90%;
+  padding: 20px;
   background-color: rgba(254, 232, 184, 255);
   border: 2px solid #962020;
   border-radius: 18px;
@@ -144,25 +156,19 @@ main {
 }
 
 @keyframes borderColorAnimation {
-  25% {
+  0% {
     border-color: #473632;
   }
-  50% {
+  25% {
     border-color: #7e642d;
   }
-  75% {
+  50% {
     border-color: #b1531d;
   }
-  100% {
+  75% {
     border-color: #ff5e00;
   }
-  75% {
-    border-color: #b1531d;
-  }
-  50% {
-    border-color: #7e642d;
-  }
-  25% {
+  100% {
     border-color: #473632;
   }
 }
@@ -220,23 +226,22 @@ main {
 
 .card .text {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 0.8;
+  text-align: justify;
+  max-width: 95%;
+  width: 100%;
+  padding: 10px;
 }
 .text-align {
-  padding: 15px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .text-align p {
-  font-size: 20px;
-  margin: 0%;
+  font-size: 18px;
+  word-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.5;
 }
 
 .text-align a {
